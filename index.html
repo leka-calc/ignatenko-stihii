@@ -25,7 +25,7 @@
     #vpstx-app .vpstx-btn:disabled{opacity:.4;cursor:default;transform:none;box-shadow:none;}
     #vpstx-app .vpstx-grad-text{background:linear-gradient(90deg,#A87C2E,#3E2E1C);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:#3E2E1C;}
     #vpstx-app .vpstx-doorrow{display:flex;gap:9px;margin-bottom:8px;}
-    #vpstx-app .vpstx-door{flex:1;position:relative;min-height:210px;border-radius:16px;overflow:hidden;cursor:pointer;background-size:cover;background-position:center;background-color:#3E2E1C;opacity:.9;border:2px solid transparent;box-shadow:0 8px 22px rgba(62,46,28,.2);transition:transform .18s ease,box-shadow .25s ease,opacity .25s ease;}
+    #vpstx-app .vpstx-door{flex:1;position:relative;min-height:240px;border-radius:16px;overflow:hidden;cursor:pointer;background-size:cover;background-position:center top;background-color:#3E2E1C;opacity:.9;border:2px solid rgba(168,124,46,.55);box-shadow:0 8px 22px rgba(62,46,28,.2);transition:transform .18s ease,box-shadow .25s ease,opacity .25s ease;}
     #vpstx-app .vpstx-door:hover{transform:translateY(-3px);opacity:1;}
     #vpstx-app .vpstx-door.vpstx-active{opacity:1;border-color:#F5E6C0;transform:translateY(-3px);box-shadow:0 16px 34px rgba(168,124,46,.42);}
     #vpstx-app .vpstx-door-scrim{position:absolute;inset:0;background:linear-gradient(180deg,rgba(34,24,12,.42) 0%,rgba(34,24,12,.12) 42%,rgba(34,24,12,.86) 100%);}
@@ -169,10 +169,7 @@
     document.getElementById('vpstx-el-water').innerHTML = ICON.water;
     document.getElementById('vpstx-el-earth').innerHTML = ICON.earth;
     document.getElementById('vpstx-el-air').innerHTML = ICON.air;
-    if(VPIMG.door){
-      var doorEls=document.querySelectorAll('#vpstx-app .vpstx-door');
-      for(var d=0;d<doorEls.length;d++){doorEls[d].style.backgroundImage='url('+VPIMG.door+')';}
-    }
+    // двери заданы индивидуально через inline background-image (d1/d2/d3.jpg)
 
     // крупные знаки стихий вразброс на фоне первого экрана
     var signLayer=document.getElementById('vpstx-s1signs');
